@@ -1707,7 +1707,7 @@ void HpgRovProduct::callbackNavRelPosNed(const ublox_msgs::NavRELPOSNED &m) {
         nh->advertise<ublox_msgs::NavRELPOSNED>("navrelposned", kROSQueueSize);
     publisher.publish(m);
   }
-
+  
   last_rel_pos_ = m;
   updater->update();
 }
